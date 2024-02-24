@@ -7,7 +7,7 @@ Esta ferramenta é uma aplicação web desenvolvida com o framework Laravel e es
 ## Recursos Principais
 
 - **Registro de Alunos:** Permite o cadastro de novos alunos com seus respectivos nomes e CPFs.
-- **Associação de Disciplinas:** Oferece a capacidade de associar múltiplas disciplinas a cada aluno durante o registro.
+- **Associação de Disciplinas:** Oferece a capacidade de associar disciplina a cada aluno durante o registro.
 - **Visualização e Edição de Alunos:** Facilita a visualização de todos os alunos registrados em uma tabela, incluindo as disciplinas associadas a cada um. Também permite a edição dos dados dos alunos.
 - **Exclusão de Alunos:** Possibilita a exclusão de alunos do sistema.
 
