@@ -26,4 +26,4 @@ Esta ferramenta é uma aplicação web desenvolvida com o framework Laravel e es
 6. Acesse a aplicação em seu navegador web.
 
 
-Este projeto é licenciado sob a [MIT License](LICENSE).
+
