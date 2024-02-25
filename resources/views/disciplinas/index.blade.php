@@ -25,7 +25,7 @@
                 <td>{{ $disciplina->nome_disciplina }}</td>
                 <td>{{ $disciplina->duracao_disciplina }}</td>
                 <td>
-                    <form action="{{ route('excluir_aluno', $disciplina->id) }}" method="POST">
+                    <form action="{{ route('excluir_disciplina', $disciplina->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-dark btn-sm">Apagar</button>
@@ -49,16 +49,16 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="editForm" method="POST" action="{{route('alterar_aluno',$disciplina->id)}}">
+                <form id="editForm" method="POST" action="{{route('alterar_disciplina',$disciplina->id)}}">
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome">
+                        <input type="text" class="form-control" id="nome" name="nome_disciplina">
                     </div>
                     <div class="mb-3">
                         <label for="cpf" class="form-label">Duração em horas</label>
-                        <input type="text" class="form-control" id="duracao" name="duracao">
+                        <input type="text" class="form-control" id="duracao" name="duracao_disciplina">
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                 </form>

@@ -23,19 +23,20 @@ class DisciplinasController extends Controller
             'duracao_disciplina' => $request->duracao_disciplina,
 
         ]);
-        return "Disciplina cadastrada com sucesso!";
+        return redirect()->route('disciplinas_index');
     }
 
     public function update(Request $request, $id)
     {
         $disciplina = Disciplina::findOrFail($id);
         $disciplina->update($request->all());
-        return redirect()->route('disciplina_index')->with('success', 'Disciplina atualizada com sucesso.');
+        return redirect()->route('disciplinas_index')->with('success', 'Disciplina atualizada com sucesso.');
     }
 
     public function destroy($id){
         $disciplina = Disciplina::findOrFail($id);
         $disciplina->delete();
-        return redirect()->route('disciplina_index')->with('success', 'Disciplina apagada com sucesso.');
+        return redirect()->route('disciplinas_index')->with('success', 'Disciplina apagada com sucesso.');
     }
+
 }

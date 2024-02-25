@@ -30,7 +30,7 @@
                             <li>{{ $disciplina->nome_disciplina }}</li>
                         @endforeach
                     </ul>
-                </td>
+
                 <td>
                     <form action="{{ route('excluir_aluno', $aluno->id) }}" method="POST">
                         @csrf
@@ -47,6 +47,7 @@
     </table>
 </div>
 
+<!-- Modal -->
 <!-- Modal -->
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -67,13 +68,27 @@
                         <label for="cpf" class="form-label">CPF</label>
                         <input type="text" class="form-control" id="cpf" name="cpf">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="disciplinas" class="form-label">Disciplinas</label>
+                        <select class="form-select" id="disciplinas" name="disciplinas[]" multiple>
+                            @foreach($disci as $disciplina)
+                                <option value="{{ $disciplina->id }}"
+                                    {{ $aluno->disciplinas->contains($disciplina) ? 'selected' : '' }}>
+                                    {{ $disciplina->nome_disciplina }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
+
                     <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
