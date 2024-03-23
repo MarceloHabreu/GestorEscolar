@@ -10,16 +10,16 @@
 <body>
 @include('miscellaneous.nav');
 <div class="container">
-    <h2 class="mt-5">Cadastro de disciplinas</h2>
-    <form action="{{route('registrar_disciplina')}}" method="POST">
+    <h2 class="mt-5">Cadastro de curso</h2>
+    <form action="{{route('cursos_registrar')}}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="nome" class="form-label">Nome da disciplina</label>
-            <input type="text" class="form-control" id="nome" name="nome_disciplina" required>
+            <label for="nome" class="form-label">Nome do curso</label>
+            <input type="text" class="form-control" id="nome" name="nome_curso" required>
         </div>
         <div class="mb-3">
-            <label for="duracao" class="form-label">Duração da disciplina</label>
-            <input type="number" class="form-control" id="duracao" name="duracao_disciplina" required>
+            <label for="duracao" class="form-label">Duração do curso</label>
+            <textarea type="text" class="form-control" id="duracao" name="descricao_curso" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </form>

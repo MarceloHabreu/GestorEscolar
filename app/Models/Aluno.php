@@ -10,6 +10,6 @@ class Aluno extends Model
     public function disciplinas(){
         return $this->belongsToMany(Disciplina::class,'aluno_disciplina');
     }
-    protected $fillable = ['nome', 'cpf'];
+
     use HasFactory;
 }
