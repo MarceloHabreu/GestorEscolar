@@ -8,19 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
 
-                    <!-- Link para Disciplinas -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="cursosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Cursos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="cursosDropdown">
-                            <li><a class="dropdown-item" href="{{ route('cursos_index') }}">Registro de cursos</a></li>
-                            <li><a class="dropdown-item" href="{{ route('cursos_registrar') }}">Cadastrar novo curso</a></li>
-                        </ul>
-                    </li>
-
-
-
+                   
 
                     <!-- Link para Disciplinas -->
                     <li class="nav-item dropdown">
@@ -44,17 +32,7 @@
                         </ul>
                     </li>
 
-                    <!-- Dropdown para Professor -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="professorDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Professor
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="professorDropdown">
-
-                            <li><a class="dropdown-item" href="{{ route('professor_create') }}">Cadastrar novo aluno</a></li>
-                        </ul>
-                    </li>
-
+                   
 
 
                 </ul>
